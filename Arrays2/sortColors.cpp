@@ -76,6 +76,11 @@ int main() {
 
     display(v);
 
+    cout<<"two pass solution: ";
+    sort(v);
+    display(v);
+
+    cout<<"one pass solution: ";
     sort2(v);
     display(v);
     

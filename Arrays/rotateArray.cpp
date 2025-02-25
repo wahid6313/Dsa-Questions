@@ -33,7 +33,7 @@ int main() {
 
     display(v);
 
-    int k =20;
+    int k =2;
     int n = v.size();
 
     if(k>n) k = k % n;
