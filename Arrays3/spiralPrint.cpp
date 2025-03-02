@@ -32,25 +32,25 @@ int main() {
     int maxr = m-1, maxc = n-1;
 
     while(minr<=maxr && minc<=maxc) {
-        for(int j=minc; j<=maxc; j++) { //right
+        for(int j=minc; j<=maxc; j++) {        //right
             cout<<arr[minr][j]<<" ";
         }
         minr++;
 
         if(minr>maxr || minc>maxc) break;
-        for(int i=minr; i<=maxr; i++) { //down
+        for(int i=minr; i<=maxr; i++) {        //down
             cout<<arr[i][maxc]<<" ";
         }
         maxc--;
 
         if(minr>maxr || minc>maxc) break;
-        for(int j=maxc; j>=minc; j--) { //left
+        for(int j=maxc; j>=minc; j--) {        //left
             cout<<arr[maxr][j]<<" ";
         }
         maxr--;
 
         if(minr>maxr || minc>maxc) break;
-        for(int i=maxr; i>=minr; i--) { //up
+        for(int i=maxr; i>=minr; i--) {        //up
             cout<<arr[i][minc]<<" ";
         }
         minc++;
