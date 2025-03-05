@@ -18,6 +18,7 @@ void sort(vector<int> &v) {
     //when array is already greatest---
     if(idx == -1) {
         reverse(v.begin(), v.end());
+        return;
     }
     // after pivot element reverse all value;---
     reverse(v.begin()+ idx+1 ,  v.end());
