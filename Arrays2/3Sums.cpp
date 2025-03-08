@@ -29,7 +29,7 @@ vector<vector<int>> threeSum(vector<int> &v) {
                 j++; k++;
 
                 while(j<k && v[j] == v[j-1]) j++;
-                while(j<k && v[k] == v[k + 1]) k--;
+
             }
         }
     }
@@ -47,15 +47,20 @@ int main() {
     v.push_back(-4);
 
 
-    for(int i=0; i<=v.size(); i++) {
-        cout<<v[i]<<" ";
+    
+
+    // Fix: Corrected loop condition (i < v.size())
+    for (int i = 0; i < v.size(); i++) {  
+        cout << v[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
 
     vector<vector<int> > result = threeSum(v);
-    cout<<"three sum:-"<<endl;
+    cout << "Three Sum:" << endl;
 
-    for (vector<int> index : result) {
-        cout << index[0] << " " << index[1] << " " << index[2] << endl;
-    } 
+    for (size_t i = 0; i < result.size(); i++) {  // Use indexing instead of range-based loop
+        cout << result[i][0] << " " << result[i][1] << " " << result[i][2] << endl;
+    }
+
+    return 0;
 }
