@@ -20,7 +20,6 @@ vector<int> merge(vector<int> &arr1 , vector<int> &arr2) {
         else {
             res[k] = arr2[j];
             j++;
-
         }
         k++;
     }
