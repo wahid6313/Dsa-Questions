@@ -11,6 +11,7 @@ vector<int> merge(vector<int> &arr1 , vector<int> &arr2) {
     int j=0; //arr2
     int k=0; //res
 
+    
     while(i<=n-1 && j<=m-1) {
         if(arr1[i] < arr2[j]) {
             res[k] = arr1[i];
