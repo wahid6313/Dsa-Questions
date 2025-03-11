@@ -14,7 +14,6 @@ int main() {
             res += arr[i] - arr[i-1];
         }
     }
-
     cout<<res;
     
 }
