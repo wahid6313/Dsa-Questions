@@ -16,19 +16,37 @@ vector<int> productOfArray(vector<int> &v, vector<int> &qe) {
     }
 
     
-    for(int i =0; i<m; i++) {
-        int len = 0;
-        for(int j =0; j<n; j++) {
-            if(v[j] > qe[i]) {
-                break;
-            } else {
-                len++;
-            }
+    // for(int i =0; i<m; i++) {
+    //     int len = 0;
+    //     for(int j =0; j<n; j++) {
+    //         if(v[j] > qe[i]) {
+    //             break;
+    //         } else {
+    //             len++;
+    //         }
             
-        }
-        ans[i] = len;
-    }
+    //     }
+    //     ans[i] = len;
+    // }
     
+    for(int i =0; i<m; i++) {
+        int maxLen = 0;
+
+        //binary search---------------------
+        int low = 0;
+        int hi = n-1;
+
+        while(low<=hi) {
+            int mid = low + (hi - low) / 2;
+            if(v[mid] > qe[i] ) hi = mid -1;
+            else {
+                maxLen = mid + 1;
+                low = mid + 1;
+            }
+        }
+        ans[i] = maxLen;
+    }
+
     return ans;
 
 
