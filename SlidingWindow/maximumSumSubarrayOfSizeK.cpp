@@ -43,10 +43,6 @@ int main() {
         j++;
     }
 
-
-
-
-
     cout<<maxSum<<endl;
     cout<<index;
 }
