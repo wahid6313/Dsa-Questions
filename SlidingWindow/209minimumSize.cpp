@@ -25,6 +25,12 @@ int main() {
         j++;
     }
 
-    cout<<"Minimun size subarray sum is: "<<minLen;
+    int x = 0;
+    if(minLen == INT_MAX) {
+        cout<<"Minimun size subarray sum is: "<<x;
+    } else {
+        cout<<"Minimun size subarray sum is: "<<minLen;
+    }
+    
  
 }
