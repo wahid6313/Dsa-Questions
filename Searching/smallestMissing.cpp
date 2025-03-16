@@ -12,6 +12,7 @@ int main() {
     
     while(low<=hi) {
         int mid = low + (hi-low)/2;
+        
         if(nums[mid] == mid) {
             low = mid + 1;
 
