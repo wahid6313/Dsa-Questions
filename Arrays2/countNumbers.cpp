@@ -1,7 +1,7 @@
 // count the value first then count number first and then value and output is "1 3 2 2 1 1 1 5 2 9" store in the string
 #include <iostream>
 #include <string>
-#include <typeinfo> 
+// #include <typeinfo> 
 using namespace std;
 
 int main() {
@@ -18,8 +18,8 @@ int main() {
         }
     }
 
-    string str = to_string(78979);
-    cout<<str;
+    // string str = to_string(78979);
+    // cout<<str;
     
     
 }
