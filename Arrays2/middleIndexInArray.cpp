@@ -12,7 +12,6 @@ int findMiddleIndex(vector<int> &v) {
     for(int i =0; i<n; i++) {
         sum = sum + v[i];
     }
-
     for(int i =0; i<n; i++) {
        int rightSum = sum-leftSum-v[i];
 
@@ -28,13 +27,12 @@ int main() {
 
     vector<int> v;
  
-    v.push_back(2);  // 2,3,-1,8,4
+    v.push_back(2);  
     v.push_back(3);
     v.push_back(-1);
     v.push_back(8);
     v.push_back(4);
-    // v.push_back(3);
-    // v.push_back(10);
+    
 
     for(int i=0; i<=v.size(); i++) {
         cout<<v[i]<<" ";
