@@ -23,7 +23,4 @@ int main() {
     else cout<<"element not found";
 
     
-
-    
-
 }
