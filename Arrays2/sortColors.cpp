@@ -8,7 +8,6 @@ void display(vector<int> &v) {
     }
     cout<<endl;
 }
-
 //two pass solution-----------------
 void sort(vector<int> &v) {
     int n = v.size();
@@ -32,6 +31,7 @@ void sort(vector<int> &v) {
 }
 
 //one pass solution - dutch flag solution--
+
 
 void sort2(vector<int> &v) {
     int n = v.size();
@@ -76,9 +76,9 @@ int main() {
 
     display(v);
 
-    cout<<"two pass solution: ";
-    sort(v);
-    display(v);
+    // cout<<"two pass solution: ";
+    // sort(v);
+    // display(v);
 
     cout<<"one pass solution: ";
     sort2(v);
