@@ -30,8 +30,6 @@ void sort2(vector<int> &v) {
     return;
 }
 
-
-
 int main() {
     vector<int> v;
 
