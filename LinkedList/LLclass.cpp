@@ -23,7 +23,8 @@ class LinkedList {  //user defined data structure---
             tail = NULL;
             size = 0;
         }
-        void insertAtEnd(int val) {
+
+        void insertAtTail(int val) {
             Node* temp = new Node(val);
             if(tail == NULL) head = tail = temp;
             else {
@@ -32,6 +33,33 @@ class LinkedList {  //user defined data structure---
             }
             size++;
         }
+
+        void insertAtHead(int val) {
+            Node* temp = new Node(val);
+            if(head == NULL) head = tail = temp;
+            else {
+                temp->next = head;
+                head = temp;
+            }
+            size++;
+        }
+
+        void insertAtIdx(int idx, int val) {
+            if(idx < 0 | idx > size) cout<<"Invalid index";
+            else if(idx == 0) insertAtHead(val);
+            else if(idx == size) insertAtTail(val);
+            else {
+                Node* t = new Node(val);
+                Node* temp = head;
+                for(int i = 1; i<=idx-1; i++) {
+                    temp = temp->next;
+                }
+                t->next = temp->next;
+                temp->next = t;
+                size++;
+            }
+        }
+
         void display() {
             Node* temp = head;
             while(temp != NULL) {
@@ -44,7 +72,11 @@ class LinkedList {  //user defined data structure---
 
 int main() {
     LinkedList ll;
-    ll.insertAtEnd(10);
-    ll.insertAtEnd(20);
+    ll.insertAtTail(10);
+    ll.insertAtTail(20);
+    ll.display();
+    ll.insertAtHead(5);
+    ll.display();
+    ll.insertAtIdx(2, 50);
     ll.display();
 }
