@@ -10,9 +10,9 @@ int main() {
     int player1=0, player2=0;
     int maxLead=0, leader=0;
     
-    for (int i = 0; i < n; i++) {
+    for (int i = 1; i <= n; i++) {
         int score1,score2;
-        cout<<"enter scores for round " <<i + 1<<": ";
+        cout<<"enter scores for round " <<i<<": ";
         cin>>score1>>score2;
         
         player1 += score1;
