@@ -52,8 +52,4 @@ int main() {
         cout<<"No cycle."<<endl;
         display(a);
     }
-    
-
-    
-    
 }
