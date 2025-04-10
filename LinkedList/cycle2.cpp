@@ -59,7 +59,7 @@ int main() {
    
 
     if(linkedListCycle2(a)) {
-        cout<<"Cycle detected."<< linkedListCycle2(a)->val << endl;
+        cout<<"Cycle detected: "<< linkedListCycle2(a)->val << endl;
     }
     else{
         cout<<"No cycle."<<endl;
