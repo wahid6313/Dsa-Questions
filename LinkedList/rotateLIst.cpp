@@ -61,8 +61,8 @@ int main() {
     
 
     display(a);
-    rotateList(a , 2);
-    display(a);
+    Node* newHead = rotateList(a , 2);
+    display(newHead);
     
 
 }
