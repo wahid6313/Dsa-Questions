@@ -11,6 +11,7 @@ class Node {
             this->next = NULL;
         }
 };
+
 void display(Node* head) {
     while(head != NULL) {
         cout<<head->val<<" ";
@@ -18,6 +19,7 @@ void display(Node* head) {
     }
     cout<<endl;
 }
+
 Node* removeDuplicates(Node* head) {
 
     if(head == NULL || head->next == NULL) return head;
