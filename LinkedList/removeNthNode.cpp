@@ -68,7 +68,7 @@ int main() {
     c->next = d;
     d->next = e;
     display(a);
-    removeNthFromEnd(a,5);
+    removeNthFromEnd(a,3);
     display(a);
     
 }
