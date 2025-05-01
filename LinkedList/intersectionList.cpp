@@ -1,28 +1,30 @@
+
 #include <iostream>
 using namespace std;
 
 class Node {
-    public:
-        int val;
-        Node* next;
-
-        Node(int val) {
-            this->val = val;
-            this->next = NULL;
-        }
+  public:    
+    int val;
+    Node* next;
+    
+    Node(int val) {
+        this->val = val;
+        this->next = NULL;
+    }
+    
 };
-
 void display(Node* head) {
     while(head != NULL) {
-        cout << head->val << " ";
+        cout<<head->val<<" ";
         head = head->next;
     }
-    cout << endl;
+    cout<<endl;
 }
 Node* intersectionList(Node* headA, Node* headB) {
     Node* tempA = headA;
     Node* tempB = headB;
-    int lenA =0;
+    
+    int lenA = 0;
     while(tempA != NULL) {
         lenA++;
         tempA = tempA->next;
@@ -46,7 +48,7 @@ Node* intersectionList(Node* headA, Node* headB) {
         return tempA;
     }
     else {
-        int diff = lenB-lenA;
+        int diff = lenB - lenA;
         for(int i =1; i<=diff; i++) {
             tempB = tempB->next;
         }
@@ -59,34 +61,37 @@ Node* intersectionList(Node* headA, Node* headB) {
 }
 
 int main() {
-
+    
     Node* a1 = new Node(10);
     Node* b1 = new Node(20);
     Node* c1 = new Node(30);
     Node* d1 = new Node(40);
     Node* e1 = new Node(50);
+
     
     a1->next = b1;
     b1->next = c1;
     c1->next = d1;
     d1->next = e1;
 
-    Node* a2 = new Node(30);
-    Node* b2 = new Node(40);
-    Node* c2 = new Node(50);
-
-    a2->next = b2;
-    b2->next = c2;
+    
+    Node* x1 = new Node(100);
+    Node* x2 = new Node(200);
+    x1->next = x2;
+    x2->next = c1;  
     cout << "First Linked List: ";
     display(a1);
 
     cout << "Second Linked List: ";
-    display(a2);
+    display(x1);
 
-    Node* intersection = intersectionList(a1, a2);
+    Node* intersection = intersectionList(a1, x1);
     if (intersection) {
         cout << "Intersection at node with value: " << intersection->val << endl;
     } else {
         cout << "No intersection found." << endl;
     }
+
+    return 0;
 }
+

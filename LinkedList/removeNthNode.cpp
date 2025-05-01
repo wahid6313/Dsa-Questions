@@ -42,7 +42,7 @@ Node* removeNthFromEnd(Node* head, int n) {
     Node* slow = head;
     Node* fast = head;
     
-    for(int i =1; i<=n+1; i++) {
+    for(int i =0; i<=n+1; i++) {
         if(fast == NULL) return head->next;
         fast = fast->next;
     }
