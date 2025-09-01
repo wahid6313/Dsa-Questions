@@ -11,26 +11,25 @@ int main() {
     }
     cout<<endl;
 
-    int pge[n];
+    int ans[n];
     stack<int> st;
 
-    pge[0] = -1;
+    ans[0] = -1;
     st.push(arr[0]);
 
-    for(int i = 1; i<=n-1; i++) {
-        while(st.size() > 0 && st.top() < arr[i]) {
+    for (int i = 1; i < n; i++) {
+        while(st.size() > 0 && arr[i] > st.top()) {
             st.pop();
         }
-        if(st.size() == 0) pge[i] = -1;
-        else pge[i] = st.top();
+        if(st.size() == 0) ans[i] = -1;
+        else
+            ans[i] = st.top();
 
         st.push(arr[i]);
     }
 
-    for(int i =0; i<n; i++) {
-        cout<<pge[i]<<" ";
+    for (int i = 0; i < n; i++) {
+        cout << ans[i] << " ";
     }
-
-
-
+    cout << endl;
 }
