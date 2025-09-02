@@ -24,7 +24,7 @@ int main() {
         if(st.size() == 0)
             pgi[i] = -1;
         else
-            pgi[i] = st.top();
+        pgi[i] = st.top();
         pgi[i] = i - pgi[i];
         st.push(i);
     }
