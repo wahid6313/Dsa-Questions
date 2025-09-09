@@ -36,7 +36,7 @@ Node* invertBinaryTree(Node* root) {
 }
 
 int main() {
-    Node *a = new Node(4);  // [4,2,7,1,3,6,9]
+    Node *a = new Node(4);  // [4,2,7,1,3,6,9] -------
     Node *b = new Node(2);
     Node *c = new Node(7);
     Node *d = new Node(1);
