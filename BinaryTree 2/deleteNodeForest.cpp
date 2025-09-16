@@ -54,6 +54,7 @@ vector<Node*> delNodes(Node* root, vector<int>& to_delete) {
     }
 
     return result;
+    
 }
 
 void display(Node* root) {
